@@ -1,0 +1,31 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+.navbar {
+    background-color: black !important;
+  }  
+    
+  .navbar-brand {  
+    font-size: 3rem;
+  }
+  .nav-link{
+    color: white !important;
+  }
+    
+  #logo{
+    float: left;
+    font-size:1.7em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+  }
+
+  #home-container{
+    margin-top: 35px;
+  }
+  .jumbotron{
+    background-image: asset-url('homebg.jpg') ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 425px;
+  }
