@@ -1,22 +1,22 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= render 'shared/error', obj: @user%>
+<%= form_with(model: @user, local: true)  do |f| %>
+<p>
+    <%= f.label :username%><br/>
+    <%= f.text_field :username%>
 
-      <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+</p>
+<p>
+    <%= f.label :email%>
+    <%= f.email_field :email%>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
+</p>
+<p>
+    <%= f.label :password%>
+    <%= f.password_field :password%>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</p>
+<p>
+    <%= f.submit(@user.new_record? ?  "SignUp" : "Update Account")%>
+</p>
+
+<%end%>
